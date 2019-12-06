@@ -7,7 +7,7 @@
 ## Executive Summary
 The aim of this project was to use images of chest X-rays of pediatric patients and try to accurately identify the images as either normal lungs or pneumonia lungs. The images were obtained from a Kaggle dataset provided by Guangzhou Women and Children’s Medical Center. In total there were 5,856 images.  The chest X-rays were performed as part of the patients routine medical care and the images were labeled by expert physicians. The images were separated into Normal and Pneumonia and then separated into train, test, and validation sets prior to my introduction to the data.  I realized that the images, although only separated into Pneumonia and Normal folders, the Pneumonia images were also labelled as viral or bacterial. So after building a neural network model with a 93% (Adapted Resnet50 model) accuracy for classifying the binary classes, I decided to split the pneumonia images into viral and bacterial images. To obtain my best classifier, I had to ensemble two of my neural network models. For the three class classification problem I was able to attain a 86.1% accuracy.
 
-**Models built**:
+**Models built**:   
 Binary Classification:
 - Fully Custom neural network
 - Adapted InceptionV3 model

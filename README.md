@@ -53,6 +53,6 @@ Overall, my model did well thanks in part to my  incorporating pretrained neural
 Kaggle Dataset: https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
 
 Additional Resources:  
-https://www.scielosp.org/article/bwho/2008.v86n5/408-416B/ 
-https://data.unicef.org/topic/child-health/pneumonia/ 
-https://www.mayoclinic.org/diseases-conditions/pneumonia/symptoms-causes/syc-20354204?p=1
+- https://www.scielosp.org/article/bwho/2008.v86n5/408-416B/ 
+- https://data.unicef.org/topic/child-health/pneumonia/ 
+- https://www.mayoclinic.org/diseases-conditions/pneumonia/symptoms-causes/syc-20354204?p=1

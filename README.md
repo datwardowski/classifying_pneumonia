@@ -26,7 +26,7 @@ The binary notebooks are in one folder together and each model is built in a sep
 The three class classification notebooks are in another folder. All the images were labelled by experts and I manually separated the pneumonia labelled images into virus and bacteria since the images were also labelled as viral or bacterial pneumonia. Since I found the most success with using pretrained network as my base layer, I decided to skip making a fully custom model. I trained the same pretrained models for the three class as I did for the binary classification. The notebooks are each labelled with the name of model and if they contain an ROC curve they have that in the title. The ensemble model was built by using the weights from my adapted InceptionV3 model and adapted Resnet50 model for the three classes. Then they were ensembled together to make a final classification of the images. The ensemble model was further trained and these notebooks are labelled with "continue_training" 01, 02, and 03. 
 
 
-The weights for the models are not included in the repository since they were too large to upload. The initial dataset can be found at the datasource sited at the bottom. 
+The weights for the models are not included in the repository since they were too large to upload. The initial dataset can be found at the Kaggle source sited below. 
 
 ## Conclusion & Recommendations
   

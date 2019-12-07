@@ -4,6 +4,8 @@
 ## Problem Statement
 **Can we build an automated system to accurately detect pneumonia based on chest X-rays?**
 
+
+
 ## Executive Summary
 The aim of this project was to use images of chest X-rays of pediatric patients and try to accurately identify the images as either normal lungs or pneumonia lungs. The images were obtained from a Kaggle dataset provided by Guangzhou Women and Children’s Medical Center. In total there were 5,856 images.  The chest X-rays were performed as part of the patients routine medical care and the images were labeled by expert physicians. The images were separated into Normal and Pneumonia and then separated into train, test, and validation sets prior to my introduction to the data.  I realized that the images, although only separated into Pneumonia and Normal folders, the Pneumonia images were also labelled as viral or bacterial. So after building a neural network model with a 93% (Adapted Resnet50 model) accuracy for classifying the binary classes, I decided to split the pneumonia images into viral and bacterial images. To obtain my best classifier, I had to ensemble two of my neural network models. For the three class classification problem I was able to attain a 86.1% accuracy.
 
@@ -17,15 +19,23 @@ Three class classification:
 - Adapted InceptionV3 model
 - Adapted Resnet50 model
 - Ensemble model
+  
+**Code Overview**:  
+The binary notebooks are in one folder together and each model is built in a separate notebook. Resnet50 and Inceptionv3 are pretrained models which were used for the base layer and Imagenet, an  image database, was used for the weights for these layers. Finally there is a results notebook which includes the confusion matrices for all the binary models as well as a ROC curve comparing all the models. 
+  
+The three class classification notebooks are in another folder. All the images were labelled by experts and I manually separated the pneumonia labelled images into virus and bacteria since the images were also labelled as viral or bacterial pneumonia. Since I found the most success with using pretrained network as my base layer, I decided to skip making a fully custom model. I trained the same pretrained models for the three class as I did for the binary classification. The notebooks are each labelled with the name of model and if they contain an ROC curve they have that in the title. The ensemble model was built by using the weights from my adapted InceptionV3 model and adapted Resnet50 model for the three classes. Then they were ensembled together to make a final classification of the images. The ensemble model was further trained and these notebooks are labelled with "continue_training" 01, 02, and 03. 
+
+
+The weights for the models are not included in the repository since they were too large to upload. The initial dataset can be found at the datasource sited at the bottom. 
 
 ## Conclusion & Recommendations
-
+  
 The purpose of this project was to build a classification model that would most accurately predict whether an image was from a healthy patient or a patient with pneumonia. After achieving an accuracy of 93%, the project was expanded to see if good accuracy could be attained for the classification between normal, bacterial (pneumonia), or viral (pneumonia) images.
-
+  
 **How will success be evaluated**: Success will be evaluated based on a model performing better than the baseline and then the best model will be chosen based off best accuracy score. Secondary success metric will be looking at the recall of the pneumonia class (bacteria/virus class).
-
+  
 I have successfully built an automated system that is not only able to accurately detect pneumonia, but is also successful at identifying the type of the pneumonia. All the models successfully outperformed the baseline. The adapted Resnet50 model was the best model in the binary classification problem with an accuracy of 92.6% and a 0.94 recall for Pneumonia. The best model for the three class classification problem was the ensemble model. The accuracy for the ensemble model was 86.1% and recall of 0.95 for bacteria and 0.78 for virus.
-
+  
 ### Binary Classification Results
 |                     	| Accuracy 	| AUROC 	| Recall            	| Precision         	|
 |:-------------------:	|----------	|-------	|-------------------	|-------------------	|
